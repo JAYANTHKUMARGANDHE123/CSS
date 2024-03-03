@@ -1,0 +1,95 @@
+2D transforms:
+
+transform: translate()/rotate()/skew()/scale();
+
+Translate(x,y): to change the position of element using coordinates in terms of pixels.
+
+syntax: transform:translate(xin px,y in px);
+<br><br><br>
+
+<html><head>
+<style>
+.md{
+height:100px;
+width:100px;
+border:1px solid black;
+transform:translate(50px,50px);
+}
+</style>
+</head>
+<body>
+<div class="md">Manoj</div>
+</body>
+</html>
+<br><br>
+<hr>
+
+scale(w,h): to change width and height of an element.
+
+syntax:transform:scale(w in int,h in int)
+
+<br><br><br>
+
+<html><head>
+<style>
+.m2{
+height:100px;
+width:100px;
+border:1px solid black;
+transform:scale(1,1.7);
+}
+</style>
+</head>
+<body>
+<div class="m2">Manoj</div>
+</body>
+</html>
+<br><br>
+<hr>
+
+rotate(deg): used to rotate an element.
+
+syntax: transform:rotate(45deg);
+
+<br><br><br>
+
+<html><head>
+<style>
+.m3{
+height:100px;
+width:100px;
+border:1px solid black;
+transform:rotate(45deg);
+}
+</style>
+</head>
+<body>
+<div class="m3">Manoj</div>
+</body>
+</html>
+
+<br><br>
+
+skew(n deg): used to rotate an element with ref to 90 deg.
+
+
+syntax: transform:skew(30)=>90+30=120 deg.
+        transform:skew(-10)=>90-10=80deg.
+
+<br><br><br>
+
+<html><head>
+<style>
+.s{
+height:100px;
+width:100px;
+border:1px solid black;
+transform:skew(30deg);
+<!--transform: skew(-18deg);-->// negative cant be dealed.
+}
+</style>
+</head>
+<body>
+<div class="s">Manoj</div>
+</body>
+</html>
