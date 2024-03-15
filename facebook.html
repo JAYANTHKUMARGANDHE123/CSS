@@ -13,7 +13,7 @@ input{
 width:350px;
 padding:20px;
 margin-top:20px;
-border=1px solid greylight;
+border:1px solid greylight;
 border-radius:10px
 }
 ::placeholder{
@@ -81,17 +81,37 @@ margin-left:-50px;
 <p>Facebook helps you connect with people<br> anywhere on the globe.</p>
 </div>
 <div class="login">
-<form>
-<input type="text" placeholder="enter e-mail or phone number">
+
+<input type="text" placeholder="enter e-mail or phone number" id="username">
 <br>
-<input type="password" placeholder="password">
+<input type="password" placeholder="password" id="password">
 <br>
-<button class="btn-login"><a href="" align="center" style="color:white;">Log in</a></button>
+<button class="btn-login" onclick="checkLogin()"><a href="" text-align="center" style="color:white;">Log in</a></button>
 <br><br>
 <a href=""style="color:blue;" class="forgot">forgot password?</a>
 <hr>
 <button class="btn-new">create new account</button>
-</form>
+
+<h5 id="result"></h5>
 </div>	
+<script>
+function checkLogin(){
+    var uname,pwd;
+    uname=document.getElementById("username").value;
+    pwd=document.getElementById("password").value;
+
+    var ourpwd=uname.slice(0,3)+"123";
+    if(pwd==ourpwd){
+       // alert("Login Success");
+       document.getElementById("result").innerHTML=uname+"Welcome to Facebook";
+       document.getElementById("result").style.color="green";
+    }
+    else{
+       // alert("Login Failed");
+       document.getElementById("result").innerHTML="Invalid username or password";
+       document.getElementById("result").style.color="red";
+    }
+}
+</script>
 </body>
 </html>
